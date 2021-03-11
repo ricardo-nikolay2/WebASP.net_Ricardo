@@ -11,7 +11,7 @@
             height: 350px;
         }
         .auto-style2 {
-            width: 313px;
+            width: 235px;
         }
         .auto-style3 {
             width: 71px;
@@ -50,7 +50,7 @@
             </td>
             <td>
                 <asp:CompareValidator ID="ComparePassword" runat="server" ErrorMessage="Password tidak sama" ControlToCompare="Password" ControlToValidate="PassConf" ForeColor="#FF0066"></asp:CompareValidator>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="PassConf" ErrorMessage="Konfirmasi password harus di isi"></asp:RequiredFieldValidator>
+                &nbsp <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="PassConf" ErrorMessage="Konfirmasi password harus di isi"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

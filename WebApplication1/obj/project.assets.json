@@ -5688,11 +5688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\RicardoWEB01\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\RicardoWEB01\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\RicardoWEB01\\WebApplication1\\obj\\",
+      "outputPath": "C:\\dev\\download\\ricardo\\WebFormAsp.Net\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

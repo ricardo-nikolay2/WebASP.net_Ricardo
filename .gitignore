@@ -1,1 +1,13 @@
-/RicardoWEB01/RicardoWEB01/App_Data
+RicardoWEB01/App_Data
+RicardoWEB01/RicardoWeb01/App_Data
+/.vs
+RicardoWeb01/bin
+RicardoWeb01/packages
+RicardoWeb01/obj
+RicardoWeb01/Properties
+RicardoWeb01/RicardoWeb01
+WebApplication1/obj/*
+/WebApplication1/obj
+*./obj.vs
+WebApplication1
+/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1

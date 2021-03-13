@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Web_MVC_NET_5.Models;
 
 namespace Web_MVC_NET_5.Data
 {
@@ -12,5 +13,6 @@ namespace Web_MVC_NET_5.Data
             : base(options)
         {
         }
+            public DbSet<Produksi> Produksis { get; set; }
     }
 }

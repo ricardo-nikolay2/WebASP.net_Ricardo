@@ -79,7 +79,8 @@
         </tr>
         <tr>
             <td class="auto-style2">
-                <asp:Button ID="Button1" runat="server" Text="Daftar" />
+                
+                <button class="ui button"  ID="Button1" runat="server" Text="Daftar">Daftar</button>
             </td>
             <td>
                 <input id="Reset1" class="auto-style3" type="reset" value="reset" /></td>

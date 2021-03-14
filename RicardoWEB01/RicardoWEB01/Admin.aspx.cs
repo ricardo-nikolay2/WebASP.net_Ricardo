@@ -11,6 +11,21 @@ namespace RicardoWEB01
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            else
+            {
+                user.Text = "Selamat Datang " + Session["UserLogin"];
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["UserLogin"] = null;
+            Response.Redirect("Login.aspx");
 
         }
     }

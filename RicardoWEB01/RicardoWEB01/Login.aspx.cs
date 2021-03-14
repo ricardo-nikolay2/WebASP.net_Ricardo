@@ -13,6 +13,10 @@ namespace RicardoWEB01
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserLogin"] != null)
+            {
+                Response.Redirect("Admin.aspx");
+            }
 
         }
 
@@ -35,7 +39,7 @@ namespace RicardoWEB01
 
                 if (password == PassLogin.Text)
                 {
-                    //session 
+                    Session["UserLogin"] = UserLogin.Text;
                     Response.Redirect("Admin.aspx");
                 }
                 else

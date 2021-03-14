@@ -9,6 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
+
+            <asp:Label ID="user" runat="server" Text="Label"></asp:Label>
+
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="215px" Width="593px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
@@ -31,6 +34,7 @@
             </asp:GridView>
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RicardoDB01Conn %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log out" />
     </form>
 </body>
 </html>

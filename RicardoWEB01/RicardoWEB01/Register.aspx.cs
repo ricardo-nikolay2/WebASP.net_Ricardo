@@ -13,6 +13,10 @@ namespace RicardoWEB01
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserLogin"] != null)
+            {
+                Response.Redirect("Admin.aspx");
+            }
 
         }
 

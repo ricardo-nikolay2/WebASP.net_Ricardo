@@ -183,3 +183,8 @@ C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\View
 C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\Produksis\Details.cshtml.g.cs
 C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\Produksis\Edit.cshtml.g.cs
 C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\Produksis\Index.cshtml.g.cs
+C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\ProduksiStringIDs\Create.cshtml.g.cs
+C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\ProduksiStringIDs\Delete.cshtml.g.cs
+C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\ProduksiStringIDs\Details.cshtml.g.cs
+C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\ProduksiStringIDs\Edit.cshtml.g.cs
+C:\dev\download\ricardo\WebFormAsp.Net\Web_MVC_NET_5\obj\Debug\net5.0\Razor\Views\ProduksiStringIDs\Index.cshtml.g.cs

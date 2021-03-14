@@ -10,90 +10,86 @@ using Web_MVC_NET_5.Models;
 
 namespace Web_MVC_NET_5.Controllers
 {
-    public class ProduksisController : Controller
+    public class ProduksiStringIDsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ProduksisController(ApplicationDbContext context)
+        public ProduksiStringIDsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Produksis
+        // GET: ProduksiStringIDs
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Produksis.ToListAsync());
+            return View(await _context.ProduksiStringIDs.ToListAsync());
         }
 
-        // GET: Produksis/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: ProduksiStringIDs/Details/5
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var produksi = await _context.Produksis
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (produksi == null)
+            var produksiStringID = await _context.ProduksiStringIDs
+                .FirstOrDefaultAsync(m => m.PartNumber == id);
+            if (produksiStringID == null)
             {
                 return NotFound();
             }
 
-            return View(produksi);
+            return View(produksiStringID);
         }
 
-        // GET: Produksis/Create
-        public async Task<IActionResult> Create()
+        // GET: ProduksiStringIDs/Create
+        public IActionResult Create()
         {
-            var produksi = await _context.Produksis.OrderByDescending(m => m.Id).FirstOrDefaultAsync() ;
-            int lastPN = Int16.Parse(produksi.PartNumber.Substring(produksi.PartNumber.Length - 2));
-            produksi.PartNumber = "S121040" + (lastPN + 1).ToString();
-            produksi.Description = "";
+            return View();
 
-            return View(produksi);
         }
 
-        // POST: Produksis/Create
+        // POST: ProduksiStringIDs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PartNumber, Description")] Produksi produksi)
+        public async Task<IActionResult> Create([Bind("PartNumber,Description")] ProduksiStringID produksiStringID)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(produksi);
+                _context.Add(produksiStringID);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(produksi);
+            return View(produksiStringID);
         }
 
-        // GET: Produksis/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: ProduksiStringIDs/Edit/5
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var produksi = await _context.Produksis.FindAsync(id);
-            if (produksi == null)
+            var produksiStringID = await _context.ProduksiStringIDs.FindAsync(id);
+            if (produksiStringID == null)
             {
                 return NotFound();
             }
-            return View(produksi);
+            return View(produksiStringID);
         }
 
-        // POST: Produksis/Edit/5
+        // POST: ProduksiStringIDs/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PartNumber, Description")] Produksi produksi)
+        public async Task<IActionResult> Edit(string id, [Bind("PartNumber,Description")] ProduksiStringID produksiStringID)
         {
-            if (id != produksi.Id)
+            if (id != produksiStringID.PartNumber)
             {
                 return NotFound();
             }
@@ -102,12 +98,12 @@ namespace Web_MVC_NET_5.Controllers
             {
                 try
                 {
-                    _context.Update(produksi);
+                    _context.Update(produksiStringID);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProduksiExists(produksi.Id))
+                    if (!ProduksiStringIDExists(produksiStringID.PartNumber))
                     {
                         return NotFound();
                     }
@@ -118,41 +114,41 @@ namespace Web_MVC_NET_5.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(produksi);
+            return View(produksiStringID);
         }
 
-        // GET: Produksis/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: ProduksiStringIDs/Delete/5
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var produksi = await _context.Produksis
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (produksi == null)
+            var produksiStringID = await _context.ProduksiStringIDs
+                .FirstOrDefaultAsync(m => m.PartNumber == id);
+            if (produksiStringID == null)
             {
                 return NotFound();
             }
 
-            return View(produksi);
+            return View(produksiStringID);
         }
 
-        // POST: Produksis/Delete/5
+        // POST: ProduksiStringIDs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var produksi = await _context.Produksis.FindAsync(id);
-            _context.Produksis.Remove(produksi);
+            var produksiStringID = await _context.ProduksiStringIDs.FindAsync(id);
+            _context.ProduksiStringIDs.Remove(produksiStringID);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProduksiExists(int id)
+        private bool ProduksiStringIDExists(string id)
         {
-            return _context.Produksis.Any(e => e.Id == id);
+            return _context.ProduksiStringIDs.Any(e => e.PartNumber == id);
         }
     }
 }

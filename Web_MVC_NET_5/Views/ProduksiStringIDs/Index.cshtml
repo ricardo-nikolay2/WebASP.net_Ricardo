@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Web_MVC_NET_5.Models.Produksi>
+﻿@model IEnumerable<Web_MVC_NET_5.Models.ProduksiStringID>
 
 @{
     ViewData["Title"] = "Index";
@@ -27,9 +27,9 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.PartNumber">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PartNumber">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PartNumber">Delete</a>
             </td>
         </tr>
 }

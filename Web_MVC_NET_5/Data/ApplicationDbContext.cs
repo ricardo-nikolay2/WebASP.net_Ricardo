@@ -14,5 +14,6 @@ namespace Web_MVC_NET_5.Data
         {
         }
             public DbSet<Produksi> Produksis { get; set; }
+            public DbSet<ProduksiStringID> ProduksiStringIDs { get; set; }
     }
 }

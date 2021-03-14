@@ -1,4 +1,4 @@
-﻿@model Web_MVC_NET_5.Models.Produksi
+﻿@model Web_MVC_NET_5.Models.ProduksiStringID
 
 @{
     ViewData["Title"] = "Create";
@@ -6,19 +6,15 @@
 
 <h1>Create</h1>
 
-<h4>Produksi</h4>
+<h4>ProduksiStringID</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-            <label class="control-label">Last ID</label>
-            <input type="text" disabled asp-for="Id" />
-            @*<label class="control-label">Last Part Number</label>
-            <input type="text" disabled asp-for="PartNumber" />*@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="PartNumber" class="control-label"></label>
-                <input asp-for="PartNumber" readonly  class="form-control" />
+                <input asp-for="PartNumber" class="form-control" />
                 <span asp-validation-for="PartNumber" class="text-danger"></span>
             </div>
             <div class="form-group">

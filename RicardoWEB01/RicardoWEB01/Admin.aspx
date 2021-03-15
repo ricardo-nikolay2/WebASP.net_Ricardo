@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="RicardoWEB01.Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="RicardoWEB01.Admin" MasterPageFile="~/WebRicardo.Master"%>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="REgister_content" ContentPlaceHolderID="ContentWebRicardo" runat="server">
         <div>
 
             <asp:Label ID="user" runat="server" Text="Label"></asp:Label>
@@ -34,7 +27,6 @@
             </asp:GridView>
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RicardoDB01Conn %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log out" />
-    </form>
-</body>
-</html>
+        <asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="Log Out" />
+     
+</asp:Content>

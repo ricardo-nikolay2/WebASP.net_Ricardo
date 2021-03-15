@@ -20,13 +20,13 @@ namespace RicardoWEB01
             {
                 user.Text = "Selamat Datang " + Session["UserLogin"];
             }
+           
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btn_logout_Click(object sender, EventArgs e)
         {
             Session["UserLogin"] = null;
             Response.Redirect("Login.aspx");
-
         }
     }
 }

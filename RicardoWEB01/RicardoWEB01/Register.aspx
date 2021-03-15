@@ -1,25 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="RicardoWEB01.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="RicardoWEB01.Register" MasterPageFile="~/WebRicardo.Master"%>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-            height: 350px;
-        }
-        .auto-style2 {
-            width: 235px;
-        }
-        .auto-style3 {
-            width: 71px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="REgister_content" ContentPlaceHolderID="ContentWebRicardo" runat="server">
         <h1>Registrasi Form</h1>
 
         <div>
@@ -87,7 +68,5 @@
     </table>
            
         </div>
-    </form>
    
-</body>
-</html>
+    </asp:Content>

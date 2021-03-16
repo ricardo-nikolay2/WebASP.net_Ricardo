@@ -44,7 +44,8 @@ namespace RicardoWEB01
                 insertquery.Parameters.AddWithValue("@gender", Gender.SelectedItem.ToString());
                 insertquery.ExecuteNonQuery();
                 RicardoConn.Close();
-                //Session
+
+                Session["UserLogin"] = Username.Text;
                 Response.Redirect("Admin.aspx");
 
             }

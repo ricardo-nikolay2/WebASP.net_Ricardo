@@ -59,7 +59,7 @@
                   <a href="Login.aspx" type="button" class="list-group-item list-group-item-action active">Login</a>
                   <a href="Register.aspx" type="button" class="list-group-item list-group-item-action">Register</a>
                   <a href="Admin.aspx" type="button" class="list-group-item list-group-item-action">Admin</a>
-                  
+                   <a href="Chart.aspx" type="button" class="list-group-item list-group-item-action">Chart</a>
                 </div>
 
             </div>

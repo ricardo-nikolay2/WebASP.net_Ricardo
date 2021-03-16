@@ -46,7 +46,7 @@ namespace RicardoWEB01
                 RicardoConn.Close();
 
                 Session["UserLogin"] = Username.Text;
-                Response.Redirect("Admin.aspx");
+                Response.Redirect("Login.aspx");
 
             }
 

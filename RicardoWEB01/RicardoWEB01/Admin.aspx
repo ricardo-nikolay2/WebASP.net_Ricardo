@@ -5,11 +5,11 @@
 
             <asp:Label ID="user" runat="server" Text="Label"></asp:Label>
 
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="215px" Width="593px">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="215px" Width="750px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
-                    <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False" />
                     <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
                     <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                     <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
@@ -26,7 +26,24 @@
                 <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RicardoDB01Conn %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
-        <asp:Button ID="btn_logout" runat="server" OnClick="btn_logout_Click" Text="Log Out" />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RicardoDB01Conn %>" SelectCommand="SELECT * FROM [User]" DeleteCommand="DELETE FROM [User] WHERE [Id] = @Id" InsertCommand="INSERT INTO [User] ([username], [password], [email], [gender]) VALUES (@username, @password, @email, @gender)" UpdateCommand="UPDATE [User] SET [username] = @username, [password] = @password, [email] = @email, [gender] = @gender WHERE [Id] = @Id">
+            <DeleteParameters>
+                <asp:Parameter Name="Id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+                <asp:Parameter Name="gender" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+                <asp:Parameter Name="gender" Type="String" />
+                <asp:Parameter Name="Id" Type="Int32" />
+            </UpdateParameters>
+</asp:SqlDataSource>
+        <asp:Button ID="Btn_logout" runat="server" OnClick="Btn_logout_Click" Text="Log Out" />
      
 </asp:Content>

@@ -23,10 +23,12 @@ namespace RicardoWEB01
            
         }
 
-        protected void btn_logout_Click(object sender, EventArgs e)
+        protected void Btn_logout_Click(object sender, EventArgs e)
         {
             Session["UserLogin"] = null;
             Response.Redirect("Login.aspx");
         }
+
+      
     }
 }

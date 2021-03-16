@@ -44,13 +44,15 @@ namespace RicardoWEB01
                 }
                 else
                 {
-                    Response.Write("password salah!");
+                    Response.Write("Password salah!");
+                    UserLogin.Text = "";
                 }
             }
 
             else
             {
                 Response.Write("Username tidak ditemukan ");
+                UserLogin.Text = "";
             }
         }
     }

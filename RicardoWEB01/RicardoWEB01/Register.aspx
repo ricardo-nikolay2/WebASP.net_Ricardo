@@ -60,10 +60,11 @@
         </tr>
         <tr>
             <td class="auto-style2">
-                <asp:Button ID="Button1" runat="server" Text="Daftar" OnClick="Button_Daftar" />
-            </td>
-            <td>
+                <asp:Button ID="Button1" runat="server" Text="Daftar" OnClick="Button_Daftar" />&nbsp &nbsp
                 <input id="Reset1" class="auto-style3" type="reset" value="reset" /></td>
+            <td>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">kembali ke Login</asp:HyperLink>
+            </td>
         </tr>
     </table>
            

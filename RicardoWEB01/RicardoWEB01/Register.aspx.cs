@@ -13,12 +13,14 @@ namespace RicardoWEB01
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserLogin"] != null)
-            {
-                Response.Redirect("Admin.aspx");
-            }
+            //if (Session["UserLogin"] != null)
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
 
+            
         }
+
 
         protected void Button_Daftar(object sender, EventArgs e)
         {
@@ -28,6 +30,7 @@ namespace RicardoWEB01
             SqlCommand query = new SqlCommand(cekuser, RicardoConn);
             int Jumlah = Convert.ToInt32(query.ExecuteScalar().ToString());
             RicardoConn.Close();
+
 
             if (Jumlah != 0)
             {
@@ -45,7 +48,7 @@ namespace RicardoWEB01
                 insertquery.ExecuteNonQuery();
                 RicardoConn.Close();
 
-                Session["UserLogin"] = Username.Text;
+                //Session["UserLogin"] = Username.Text;
                 Response.Redirect("Login.aspx");
 
             }
